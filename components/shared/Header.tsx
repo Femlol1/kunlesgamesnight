@@ -10,7 +10,7 @@ const Header = () => {
     <header className="w-full border-b">
         <div className="flex wrapper items-center justify-between w-full">
             <Link href={"/"} className="w-36">
-            <Image src={"/assets/images/logo.svg"} width={128} height={38}
+            <Image src={"/assets/images/logo.png"} width={50} height={38}
             alt="KunlesGamesNight logo"/>
 
             </Link>
