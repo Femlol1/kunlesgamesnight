@@ -13,6 +13,7 @@ import { Textarea } from "@/components/ui/textarea"
 
 import { Checkbox } from "@/components/ui/checkbox"
 import { eventDefaultValues } from "@/constants"
+import { useUploadThing } from "@/lib/uploadthing"
 import { eventFormSchema } from "@/lib/validator"
 import { zodResolver } from "@hookform/resolvers/zod"
 import Image from "next/image"
@@ -24,6 +25,10 @@ import { z } from "zod"
 import { Label } from "../ui/label"
 import DropDown from "./DropDown"
 import { FileUploader } from "./FileUploader"
+// import CreateEvent from "@/app/(root)/events/create/page"
+import { createEvent } from "@/lib/actions/event.actions"
+import { useRouter } from "next/navigation"
+
 
 
 
@@ -37,6 +42,9 @@ type EventFormProps = {
 const EventForm = ({ userId, type }: EventFormProps ) => {
     const [files, setFiles] = useState<File[]>([])
     const initialValues = eventDefaultValues;
+    const router = useRouter();
+
+    const { startUpload } = useUploadThing('imageUploader')
 
 
     const form = useForm<z.infer<typeof eventFormSchema>>({
@@ -44,11 +52,33 @@ const EventForm = ({ userId, type }: EventFormProps ) => {
         defaultValues: initialValues,
       })
      
-      // 2. Define a submit handler.
-      function onSubmit(values: z.infer<typeof eventFormSchema>) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
+      
+    async function onSubmit(values: z.infer<typeof eventFormSchema>) {
+
+        let uploadedImageUrl = values.imageUrl;
+
+        if (files.length > 0) {
+            const uploadImages = await startUpload(files)
+            if(!uploadImages) {
+                return
+            }
+            uploadedImageUrl = uploadImages[0].url
+        }
+        if (type === 'Create') {
+            try {
+                const newEvent = await createEvent({
+                    event: { ...values, imageUrl: uploadedImageUrl },
+                    userId,
+                    path: '/profile'
+                })
+                if(newEvent) {
+                    form.reset();
+                    router.push(`/events/${newEvent._id}`)
+                }
+            } catch (error) {
+                console.log(error)
+            }
+        }
       }
   return (
     <Form {...form}>
