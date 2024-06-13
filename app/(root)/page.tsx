@@ -12,7 +12,7 @@ export default function Home() {
               Connect, Celebrate: Your Events!
             </h1>
             <p className="p-regular-20 md:p-regular-24">
-              book and learn form mentors all around the world
+              Enjoy fun times
             </p>
             <Button size="lg" asChild className="button w-full sm:w-fit">
               <Link href={"#events"}>
