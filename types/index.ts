@@ -67,6 +67,7 @@ export type CreateUserParams = {
     userId: string
     limit?: number
     page: number
+    excludeEventId?: string;
   }
   
   export type GetRelatedEventsByCategoryParams = {

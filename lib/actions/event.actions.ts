@@ -137,6 +137,37 @@ const getCategoryByName = async (name: string) => {
       handleError(error)
     }
   }
+
+
+   // GET EVENTS BY ORGANIZER
+   export async function getEventsByOrganizer({
+    userId,
+    limit = 6,
+    page,
+    excludeEventId, // Add this parameter to the function's signature
+  }: GetEventsByUserParams & { excludeEventId?: string }) { // Ensure the type includes excludeEventId
+    try {
+      await connectToDatabase()
+  
+      const conditions = { 
+        organizer: userId,
+        _id: { $ne: excludeEventId } // Use $ne to exclude the specific event ID
+      }
+      const skipAmount = (page - 1) * limit
+  
+      const eventsQuery = Event.find(conditions)
+        .sort({ createdAt: 'desc' })
+        .skip(skipAmount)
+        .limit(limit)
+  
+      const events = await populateEvent(eventsQuery)
+      const eventsCount = await Event.countDocuments(conditions)
+  
+      return { data: JSON.parse(JSON.stringify(events)), totalPages: Math.ceil(eventsCount / limit) }
+    } catch (error) {
+      handleError(error)
+    }
+  }
   
   // GET RELATED EVENTS: EVENTS WITH SAME CATEGORY
   export async function getRelatedEventsByCategory({
