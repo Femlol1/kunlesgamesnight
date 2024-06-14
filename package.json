@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.1.4",
+    "@clerk/nextjs": "^5.1.5",
     "@hookform/resolvers": "^3.6.0",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-checkbox": "^1.0.4",
@@ -18,6 +18,7 @@
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
+    "@stripe/stripe-js": "^3.5.0",
     "@uploadthing/react": "^6.6.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -30,6 +31,7 @@
     "react-datepicker": "^7.0.0",
     "react-dom": "^18",
     "react-hook-form": "^7.51.5",
+    "stripe": "^15.11.0",
     "svix": "^1.24.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
@@ -41,6 +43,7 @@
     "@types/react": "^18",
     "@types/react-datepicker": "^6.2.0",
     "@types/react-dom": "^18",
+    "@types/stripe": "^8.0.417",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

@@ -5,12 +5,12 @@ export interface IEvent extends Document {
     title: string;
     description?: string; // Optional since not required in the schema
     location?: string; // Optional since not required in the schema
-    createdAt?: Date; // Optional since it has a default value
+    createdAt: Date; // Optional since it has a default value
     imageUrl: string;
-    startDateTime?: Date; // Optional since it has a default value
-    endDateTime?: Date; // Optional since it has a default value
-    price?: string; // Optional since not required in the schema
-    isFree?: boolean; // Optional since it has a default value
+    startDateTime: Date; // Optional since it has a default value
+    endDateTime: Date; // Optional since it has a default value
+    price: string; // Optional since not required in the schema
+    isFree: boolean; // Optional since it has a default value
     url?: string; // Optional since not required in the schema
     category: {_id:string, name: string};
     organizer: {_id:string, firstName: string, lastName: string}
