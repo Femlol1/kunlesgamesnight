@@ -46,23 +46,16 @@ export const checkoutOrder = async (order: CheckoutOrderParams) => {
 
 export const createOrder = async (order: CreateOrderParams) => {
   try {
-    // await connectToDatabase();
-    const db = await connectToDatabase();
-    
-    if (!db) {
-      console.error("Failed to connect to the database.");
-      return;
-    }
+    await connectToDatabase();
     
     const newOrder = await Order.create({
       ...order,
       event: order.eventId,
       buyer: order.buyerId,
     });
-
+    console.log({newOrder})
     return JSON.parse(JSON.stringify(newOrder));
   } catch (error) {
-    console.error("Error creating order:", error);
     handleError(error);
   }
 }

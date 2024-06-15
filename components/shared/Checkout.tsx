@@ -28,17 +28,20 @@ const Checkout = ({ event, userId }: { event: IEvent, userId: string }) => {
       isFree: event.isFree,
       buyerId: userId
     }
+    
 
     await checkoutOrder(order);
+    console.log({order})
   }
 
   return (
     <form action={onCheckout} method="post">
       <Button type="submit" role="link" size="lg" className="button sm:w-fit">
         {event.isFree ? 'Get Ticket' : 'Buy Ticket'}
+        
       </Button>
     </form>
   )
 }
 
-export default Checkout
+export default Checkout;
