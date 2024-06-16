@@ -53,7 +53,7 @@ export const createOrder = async (order: CreateOrderParams) => {
       event: order.eventId,
       buyer: order.buyerId,
     });
-    console.log({newOrder})
+    
     return JSON.parse(JSON.stringify(newOrder));
   } catch (error) {
     handleError(error);

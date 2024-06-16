@@ -31,7 +31,7 @@ const Checkout = ({ event, userId }: { event: IEvent, userId: string }) => {
     
 
     await checkoutOrder(order);
-    console.log({order})
+    
   }
 
   return (
