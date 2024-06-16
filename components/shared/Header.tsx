@@ -12,7 +12,6 @@ const Header = () => {
             <Link href={"/"} className="w-36">
             <Image src={"/assets/images/logo.png"} width={50} height={38}
             alt="KunlesGamesNight logo"/>
-
             </Link>
             <SignedIn>
                 <nav className="md:flex-between hidden w-full max-w-xs">

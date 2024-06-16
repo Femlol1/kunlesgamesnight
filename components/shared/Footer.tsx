@@ -13,6 +13,36 @@ const Footer = () => {
             height={38}
             />
         </Link>
+        <Link href={"https://www.youtube.com/@Kunlesgamesnight"}>
+        <Image
+            src="/assets/icons/youtube.svg"
+            alt="logo"
+            width={50}
+            height={38}
+            />
+        </Link>
+        <Link href={"https://www.instagram.com/kunlesgamesnight/"}>
+        <Image
+            src="/assets/icons/instagram.svg"
+            alt="logo"
+            width={30}
+            height={38}
+            />
+            </Link>
+        <Link href={"https://twitter.com/KGN_official_"}>
+        <Image
+            src="/assets/icons/twitter.svg"
+            alt="logo"
+            width={50}
+            height={38}
+            /></Link>
+        <Link href={"https://www.facebook.com/profile.php?id=100095073176779"}>
+        <Image
+            src="/assets/icons/facebook.svg"
+            alt="logo"
+            width={50}
+            height={38}
+            /></Link>
         <p>2023 KunlesGamesNight. All Rights reserved.</p>
       </div>
     </footer>

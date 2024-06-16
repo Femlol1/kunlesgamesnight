@@ -12,10 +12,10 @@ const poppins = Poppins({
  });
 
 export const metadata: Metadata = {
-  title: "KunlesGamesNight",
-  description: "KunlesGamesNight platform for events",
+  title: "Kunle's Games Night",
+  description: "Kunle's Games Night a platform for events",
   icons : {
-    icon : '/assets/images/logo.svg'
+    icon : '/assets/images/logo.png'
   }
 };
 
