@@ -1,52 +1,56 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="border-t">
-      <div className="flex-center wrapper flex-between flex flex-col gap-4 p-5 text-center sm:flex-row">
+    <footer className="border-t border-dark-50 bg-dark-50 text-white">
+      <div className="flex wrapper items-center justify-between flex-wrap p-5 text-center sm:text-left">
         <Link href={'/'}>
           <Image
             src="/assets/images/logo.png"
-            alt="logo"
+            alt="KunlesGamesNight logo"
             width={50}
             height={38}
-            />
+          />
         </Link>
-        <Link href={"https://www.youtube.com/@Kunlesgamesnight"}>
-        <Image
-            src="/assets/icons/youtube.svg"
-            alt="logo"
-            width={50}
-            height={38}
+        <div className="flex items-center justify-center gap-4">
+          <Link href={"https://www.youtube.com/@Kunlesgamesnight"}>
+            <Image
+              src="/assets/icons/youtube.svg"
+              alt="YouTube"
+              width={50}
+              height={38}
             />
-        </Link>
-        <Link href={"https://www.instagram.com/kunlesgamesnight/"}>
-        <Image
-            src="/assets/icons/instagram.svg"
-            alt="logo"
-            width={30}
-            height={38}
+          </Link>
+          <Link href={"https://www.instagram.com/kunlesgamesnight/"}>
+            <Image
+              src="/assets/icons/instagram.svg"
+              alt="Instagram"
+              width={30}
+              height={38}
             />
-            </Link>
-        <Link href={"https://twitter.com/KGN_official_"}>
-        <Image
-            src="/assets/icons/twitter.svg"
-            alt="logo"
-            width={50}
-            height={38}
-            /></Link>
-        <Link href={"https://www.facebook.com/profile.php?id=100095073176779"}>
-        <Image
-            src="/assets/icons/facebook.svg"
-            alt="logo"
-            width={50}
-            height={38}
-            /></Link>
-        <p>2023 KunlesGamesNight. All Rights reserved.</p>
+          </Link>
+          <Link href={"https://twitter.com/KGN_official_"}>
+            <Image
+              src="/assets/icons/twitter.svg"
+              alt="Twitter"
+              width={50}
+              height={38}
+            />
+          </Link>
+          <Link href={"https://www.facebook.com/profile.php?id=100095073176779"}>
+            <Image
+              src="/assets/icons/facebook.svg"
+              alt="Facebook"
+              width={50}
+              height={38}
+            />
+          </Link>
+        </div>
+        <p className="w-full sm:w-auto mt-4 sm:mt-0">2023 KunlesGamesNight. All Rights reserved.</p>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

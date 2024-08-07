@@ -32,11 +32,11 @@ export const formatDateTime = (dateString: Date) => {
     hour12: true, // use 12-hour clock (true) or 24-hour clock (false)
   }
 
-  const formattedDateTime: string = new Date(dateString).toLocaleString('en-US', dateTimeOptions)
+  const formattedDateTime: string = new Date(dateString).toLocaleString('en-UK', dateTimeOptions)
 
-  const formattedDate: string = new Date(dateString).toLocaleString('en-US', dateOptions)
+  const formattedDate: string = new Date(dateString).toLocaleString('en-UK', dateOptions)
 
-  const formattedTime: string = new Date(dateString).toLocaleString('en-US', timeOptions)
+  const formattedTime: string = new Date(dateString).toLocaleString('en-UK', timeOptions)
 
   return {
     dateTime: formattedDateTime,
@@ -49,9 +49,9 @@ export const convertFileToUrl = (file: File) => URL.createObjectURL(file)
 
 export const formatPrice = (price: string) => {
   const amount = parseFloat(price)
-  const formattedPrice = new Intl.NumberFormat('en-US', {
+  const formattedPrice = new Intl.NumberFormat('en-UK', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'GBP',
   }).format(amount)
 
   return formattedPrice

@@ -21,32 +21,33 @@ export default async function Home({ searchParams }: SearchParamProps) {
 
   return (
     <>
-      <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
-        <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0 ">
-          <div className="flex flex-col justify-center gap-8">
-            <h1 className="h1-bold">
+      <section className="bg-dark-50 py-5 md:py-10">
+        <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
+          <div className="flex flex-col justify-center gap-8 text-white">
+            <h1 className="h1-bold text-primary">
               Kunle's Games Night
             </h1>
-            <p className="p-regular-20 md:p-regular-24">
-              connect to use 
+            <p className="p-regular-15 md:p-regular-20 text-secondary">
+              Join us for thrilling gatherings of friends, laughter, and epic gaming showdowns!
+              Use code <span className="text-accent">KGN10</span> for 10% off at getdaba.com
             </p>
-            <Button size="lg" asChild className="button w-full sm:w-fit">
+            <Button size="lg" asChild className="bg-primary text-dark-50 w-full sm:w-fit">
               <Link href={"#events"}>
                 Explore Now
               </Link>
             </Button>
           </div>
           <Image 
-          src="/assets/images/hero.png"
-          alt="hero"
-          width={1000}
-          height={1000}
-          className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
+            src="/assets/images/hero.png"
+            alt="hero"
+            width={1000}
+            height={1000}
+            className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
           />
         </div>
       </section>
-      <section id="events" className="wrapper my-8  w-full flex flex-col gap-8 md:gap-12">
-        <h2 className="h2-bold ">Events</h2>
+      <section id="events" className="wrapper my-8 w-full flex flex-col gap-8 md:gap-12">
+        <h2 className="h2-bold text-primary">Events</h2>
         <div className="flex w-full flex-col gap-5 md:flex-row">
           <Search />
           <CatergoryFilter />
@@ -59,7 +60,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
            limit={6}
            page={page}
            totalPages={events?.totalPages}
-          />
+        />
       </section>
     </>
   );

@@ -20,15 +20,43 @@ module.exports = withUt({
     extend: {
       colors: {
         primary: {
-          500: '#624CF5',
-          50: ' #F6F8FD',
-          DEFAULT: '#624CF5',
-          foreground: 'hsl(var(--primary-foreground))',
+          DEFAULT: '#8B008B', // Dark Magenta
+          '50': '#F5E6F5',
+          '100': '#EAD1EA',
+          '200': '#D3A3D3',
+          '300': '#BD75BD',
+          '400': '#A646A6',
+          '500': '#8B008B',
+          '600': '#700070',
+          '700': '#560056',
+          '800': '#3B003B',
+          '900': '#200020',
+          foreground: '#FFFFFF',
+        },
+        secondary: {
+          DEFAULT: '#00FFFF', // Neon Blue
+          foreground: '#FFFFFF',
+        },
+        accent: {
+          DEFAULT: '#FFFF00', // Neon Yellow
+          foreground: '#000000',
+        },
+        dark: {
+          DEFAULT: '#1A1A1A', // Dark background
+          '50': '#333333',
+          '100': '#4D4D4D',
+          '200': '#666666',
+          '300': '#808080',
+          '400': '#999999',
+          '500': '#B3B3B3',
+          '600': '#CCCCCC',
+          '700': '#E6E6E6',
+          '800': '#F2F2F2',
+          '900': '#FFFFFF',
         },
         coral: {
           500: '#15BF59',
         },
-
         grey: {
           600: '#545454', // Subdued - color name in figma
           500: '#757575',
@@ -41,10 +69,6 @@ module.exports = withUt({
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         foreground: 'hsl(var(--foreground))',
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
@@ -52,10 +76,6 @@ module.exports = withUt({
         muted: {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
         },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
