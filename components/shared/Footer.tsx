@@ -42,7 +42,7 @@ const Footer = () => {
             <Image
               src="/assets/icons/facebook.svg"
               alt="Facebook"
-              width={50}
+              width={45}
               height={38}
             />
           </Link>
