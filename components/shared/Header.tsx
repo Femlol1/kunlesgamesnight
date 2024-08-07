@@ -6,7 +6,7 @@ import NavItems from "./NavItems";
 
 const Header = () => {
   return (
-    <header className="w-full border-b border-dark-50 bg-dark-50 text-white">
+    <header className="w-full border-b border-grey-200 bg-white text-dark-50">
       <div className="flex wrapper items-center justify-between w-full">
         <Link href={"/"} className="w-36">
           <Image 
@@ -14,7 +14,6 @@ const Header = () => {
             width={50} 
             height={38} 
             alt="KunlesGamesNight logo"
-            className="h-auto w-auto"
           />
         </Link>
         <SignedIn>

@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+import { PluginAPI } from 'tailwindcss/types/config';
 import { withUt } from 'uploadthing/tw';
+
 
 module.exports = withUt({
   darkMode: ['class'],
@@ -20,7 +22,7 @@ module.exports = withUt({
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#8B008B', // Dark Magenta
+          DEFAULT: '#C43BC4', // Dark Magenta 8B008B
           '50': '#F5E6F5',
           '100': '#EAD1EA',
           '200': '#D3A3D3',
@@ -112,7 +114,32 @@ module.exports = withUt({
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      boxShadow: {
+        'neon-pink': '0 0 5px #FF00FF, 0 0 10px #FF00FF, 0 0 20px #FF00FF, 0 0 40px #FF00FF',
+        'neon-blue': '0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF',
+      },
+      textShadow: {
+        'neon-pink': '0 0 5px #FF00FF, 0 0 10px #FF00FF, 0 0 20px #FF00FF, 0 0 40px #FF00FF',
+        'neon-blue': '0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF',
+      },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    function ({ addUtilities }: PluginAPI) {
+      const newUtilities = {
+        '.text-shadow-neon-pink': {
+          textShadow: '0 0 5px #FF00FF, 0 0 10px #FF00FF, 0 0 20px #FF00FF, 0 0 40px #FF00FF',
+        },
+        '.text-shadow-neon-blue': {
+          textShadow: '0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF',
+        },
+      };
+
+      addUtilities(newUtilities, {
+        respectPrefix: false,
+        respectImportant: false,
+      });
+    }
+  ],
 });

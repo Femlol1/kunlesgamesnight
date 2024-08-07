@@ -1,11 +1,11 @@
 "use client"
 
 import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from "@/components/ui/select";
 import { getAllCategories } from "@/lib/actions/category.actions";
 import { ICategory } from "@/lib/database/models/category.model";
@@ -50,7 +50,7 @@ const CategoryFilter = () => {
   return (
     <Select onValueChange={(value: string) => onSelectCategory(value)}>
       <SelectTrigger className="select-field">
-        <SelectValue placeholder="Category" />
+        <SelectValue placeholder="Location" />
       </SelectTrigger>
       <SelectContent>
         <SelectItem value="All" className="select-item p-regular-14">All</SelectItem>

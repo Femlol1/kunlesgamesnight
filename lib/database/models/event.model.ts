@@ -11,7 +11,7 @@ export interface IEvent extends Document {
     endDateTime: Date; // Optional since it has a default value
     price: string; // Optional since not required in the schema
     isFree: boolean; // Optional since it has a default value
-    url?: string; // Optional since not required in the schema
+    url: string; // Optional since not required in the schema
     category: {_id:string, name: string};
     organizer: {_id:string, firstName: string, lastName: string}
 }

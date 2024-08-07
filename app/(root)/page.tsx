@@ -17,50 +17,49 @@ export default async function Home({ searchParams }: SearchParamProps) {
     category,
     page,
     limit: 6
-  })
+  });
 
   return (
     <>
-      <section className="bg-dark-50 py-5 md:py-10">
-        <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
-          <div className="flex flex-col justify-center gap-8 text-white">
-            <h1 className="h1-bold text-primary">
-              Kunle's Games Night
-            </h1>
-            <p className="p-regular-15 md:p-regular-20 text-secondary">
-              Join us for thrilling gatherings of friends, laughter, and epic gaming showdowns!
-              Use code <span className="text-accent">KGN10</span> for 10% off at getdaba.com
-            </p>
-            <Button size="lg" asChild className="bg-primary text-dark-50 w-full sm:w-fit">
-              <Link href={"#events"}>
-                Explore Now
-              </Link>
-            </Button>
-          </div>
-          <Image 
-            src="/assets/images/hero.png"
-            alt="hero"
-            width={1000}
-            height={1000}
-            className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
-          />
+      <section className="relative bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
+        <Image 
+          src="/assets/images/94-4Q0A8461.jpg"
+          alt="hero"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          className="absolute inset-0 z-0"
+        />
+        <div className="wrapper relative z-10 flex flex-col justify-center items-center gap-8 bg-black bg-opacity-0 p-5 md:p-10 rounded-lg text-center">
+          <h1 className="h1-bold text-white text-shadow-neon-pink">
+            Kunle's Games Night
+          </h1>
+          <p className="p-regular-20 md:p-regular-24 text-white text-shadow-neon-blue">
+            Join us for thrilling gatherings of friends, laughter, and epic gaming showdowns!
+          </p>
+          <Button size="lg" asChild className="button w-full sm:w-fit bg-primary text-white">
+            <Link href={"#events"}>
+              Events
+            </Link>
+          </Button>
         </div>
       </section>
       <section id="events" className="wrapper my-8 w-full flex flex-col gap-8 md:gap-12">
         <h2 className="h2-bold text-primary">Events</h2>
         <div className="flex w-full flex-col gap-5 md:flex-row">
-          <Search />
+          
           <CatergoryFilter />
         </div>
         <Collection 
-           data={events?.data}
-           emptyTitle="No Events Found"
-           emptyStateSubtext="Come back later"
-           collectionType="All_Events"
-           limit={6}
-           page={page}
-           totalPages={events?.totalPages}
+          data={events?.data}
+          emptyTitle="No Events Found"
+          emptyStateSubtext="Come back later"
+          collectionType="All_Events"
+          limit={6}
+          page={page}
+          totalPages={events?.totalPages}
         />
+        <Search />
       </section>
     </>
   );
