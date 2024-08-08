@@ -26,6 +26,7 @@
     "body-parser": "^1.20.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dompurify": "^3.1.6",
     "express": "^4.19.2",
     "isomorphic-fetch": "^3.0.0",
     "lucide-react": "^0.390.0",
@@ -37,6 +38,7 @@
     "react-datepicker": "^7.0.0",
     "react-dom": "^18",
     "react-hook-form": "^7.51.5",
+    "react-quill": "^2.0.0",
     "stripe": "^15.11.0",
     "svix": "^1.24.0",
     "tailwind-merge": "^2.3.0",
@@ -45,6 +47,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-datepicker": "^6.2.0",

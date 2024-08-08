@@ -1,4 +1,4 @@
-import EventForm from "@/components/shared/EventForm";
+import EventForm from "@/components/shared/EventForm/EventForm";
 import { getEventById } from "@/lib/actions/event.actions";
 import { auth } from "@clerk/nextjs/server";
 
