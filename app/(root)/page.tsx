@@ -23,12 +23,10 @@ export default async function Home({ searchParams }: SearchParamProps) {
     <>
       <section className="relative bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
         <Image 
-          src="/assets/images/94-4Q0A8461.jpg"
+          src="/assets/images/261-4Q0A6197.jpg"
           alt="hero"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          className="absolute inset-0 z-0"
+          fill
+          className="absolute inset-0 z-0 object-cover object-center"
         />
         <div className="wrapper relative z-10 flex flex-col justify-center items-center gap-8 bg-black bg-opacity-0 p-5 md:p-10 rounded-lg text-center">
           <h1 className="h1-bold text-white text-shadow-neon-pink">
@@ -46,8 +44,8 @@ export default async function Home({ searchParams }: SearchParamProps) {
       </section>
       <section id="events" className="wrapper my-8 w-full flex flex-col gap-8 md:gap-12">
         <h2 className="h2-bold text-primary">Events</h2>
-        <div className="flex w-full flex-col gap-5 md:flex-row">
-          
+        <div className="flex w-full flex-row gap-5 md:flex-row">
+          <Search />
           <CatergoryFilter />
         </div>
         <Collection 
@@ -59,7 +57,6 @@ export default async function Home({ searchParams }: SearchParamProps) {
           page={page}
           totalPages={events?.totalPages}
         />
-        <Search />
       </section>
     </>
   );
