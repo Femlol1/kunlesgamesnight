@@ -18,6 +18,15 @@ export const userHeaderLink = [
     label: 'Home',
     route: '/',
   },
+  {
+    label: 'Events',
+    route: '/allEvents'
+  },
+  {
+    label:'FAQ',
+    route:'/faq',
+  },
+  
 ]
 
   export const eventDefaultValues = {

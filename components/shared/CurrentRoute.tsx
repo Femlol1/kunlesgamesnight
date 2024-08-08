@@ -7,9 +7,8 @@ const CurrentRoute = () => {
     const pathname = usePathname();
     const currentLink = userHeaderLink.find(link => pathname === link.route);
   return (
-<SignedOut >
-        <div className={'sm:hidden text-primary-500 flex-center p-medium-16 whitespace-nowrap'} >{currentLink && currentLink.label}</div>
-        
+    <SignedOut >
+        <div className={'md:hidden text-primary flex-center font-bold whitespace-nowrap'} >{currentLink && currentLink.label}</div>  
     </SignedOut>  )
 }
 
