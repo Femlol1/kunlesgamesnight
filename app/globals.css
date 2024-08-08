@@ -222,7 +222,7 @@ body {
 	}
 
 	.select-item {
-		@apply py-3 cursor-pointer  focus:bg-primary-50;
+		@apply py-3 cursor-pointer focus:bg-grey-50 !important; /* makes dropdown hover grey*/
 	}
 
 	.toggle-switch {

@@ -47,7 +47,7 @@ const Footer = () => {
             />
           </Link>
         </div>
-        <p className="w-full sm:w-auto mt-4 sm:mt-0">2023 KunlesGamesNight. All Rights reserved.</p>
+        <p className="w-full sm:w-auto mt-4 sm:mt-0">2024 KunlesGamesNight All Rights reserved.</p>
       </div>
     </footer>
   );
