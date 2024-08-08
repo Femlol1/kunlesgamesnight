@@ -12,7 +12,14 @@ export const headerLinks = [
       route: '/profile',
     },
   ]
-  
+
+export const userHeaderLink = [
+  {
+    label: 'Home',
+    route: '/',
+  },
+]
+
   export const eventDefaultValues = {
     title: '',
     description: '',

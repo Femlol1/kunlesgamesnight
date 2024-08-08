@@ -2,14 +2,13 @@
 import { PluginAPI } from 'tailwindcss/types/config';
 import { withUt } from 'uploadthing/tw';
 
-
 module.exports = withUt({
   darkMode: ['class'],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
     container: {
@@ -22,7 +21,7 @@ module.exports = withUt({
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#C43BC4', // Dark Magenta 8B008B
+          DEFAULT: '#C43BC4',
           '50': '#F5E6F5',
           '100': '#EAD1EA',
           '200': '#D3A3D3',
@@ -36,15 +35,15 @@ module.exports = withUt({
           foreground: '#FFFFFF',
         },
         secondary: {
-          DEFAULT: '#00FFFF', // Neon Blue
+          DEFAULT: '#00FFFF',
           foreground: '#FFFFFF',
         },
         accent: {
-          DEFAULT: '#FFFF00', // Neon Yellow
+          DEFAULT: '#FFFF00',
           foreground: '#000000',
         },
         dark: {
-          DEFAULT: '#1A1A1A', // Dark background
+          DEFAULT: '#1A1A1A',
           '50': '#333333',
           '100': '#4D4D4D',
           '200': '#666666',
@@ -60,11 +59,11 @@ module.exports = withUt({
           500: '#15BF59',
         },
         grey: {
-          600: '#545454', // Subdued - color name in figma
+          600: '#545454',
           500: '#757575',
-          400: '#AFAFAF', // Disabled - color name in figma
-          100: '#F2EFEF',//a little darker grey
-          50: '#F6F6F6', // White Grey - color name in figma
+          400: '#AFAFAF',
+          100: '#F2EFEF',
+          50: '#F6F6F6',
         },
         black: '#000000',
         white: '#FFFFFF',
@@ -141,6 +140,6 @@ module.exports = withUt({
         respectPrefix: false,
         respectImportant: false,
       });
-    }
+    },
   ],
 });
